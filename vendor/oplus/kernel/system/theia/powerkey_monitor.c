@@ -14,9 +14,11 @@ static char *flow_buf = NULL;
 static char *flow_buf_curr = NULL;
 static int flow_index=0;
 static int stage_start=0;
-static const int flow_size = 16;
-static const int stage_brief_size = 64;
-static const int stage_total_size = stage_brief_size*flow_size;
+enum {
+    flow_size = 16,
+    stage_brief_size = 64,
+    stage_total_size = stage_brief_size * flow_size,
+};
 
 static struct task_struct *block_thread = NULL;
 static bool timer_started = false;
