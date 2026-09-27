@@ -608,5 +608,5 @@ int __init create_vmalloc_debug(struct proc_dir_entry *parent)
 	}
 	return 0;
 }
-EXPORT_SYMBOL(create_vmalloc_debug);
+/* Init-only helper; do not export a symbol discarded after boot. */
 #endif /* _VMALLOC_DEBUG_ */
